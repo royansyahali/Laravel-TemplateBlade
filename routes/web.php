@@ -11,7 +11,12 @@
 |
 */
 
-Route::get('/',"HomeController@Home");
-Route::get('/register',"AuthController@Form");
-Route::post('/welcome',"AuthController@Index");
+// Route::get('/',"HomeController@Home");
+// Route::get('/register',"AuthController@Form");
+// Route::post('/welcome',"AuthController@Index");
 
+Route::get('/template',function(){
+    return view("adminLte.template");
+});
+Route::get('/',"TableController@Index");
+Route::get('/data-table',"TableController@DataTable");
